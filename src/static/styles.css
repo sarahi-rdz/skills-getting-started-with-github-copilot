@@ -60,9 +60,11 @@ section h3 {
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border: 1px solid #dde6f3;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  box-shadow: 0 10px 24px rgba(26, 35, 126, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .activity-card h4 {
@@ -70,8 +72,90 @@ section h3 {
   color: #0066cc;
 }
 
+.activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(26, 35, 126, 0.12);
+}
+
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #dde6f3;
+}
+
+.participants-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1a237e;
+  text-transform: uppercase;
+}
+
+.participants-list {
+  margin: 0;
+  padding: 0;
+  color: #344054;
+  list-style: none;
+}
+
+.participants-list li {
+  margin-bottom: 6px;
+}
+
+.participant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border: 1px solid #dbe5f2;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.participant-remove {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #f1b0b7;
+  border-radius: 999px;
+  background: #fff5f5;
+  color: #b42318;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.participant-remove:hover {
+  background: #ffe4e8;
+  border-color: #f38b98;
+  transform: scale(1.05);
+}
+
+.participant-remove:focus-visible {
+  outline: 3px solid rgba(180, 35, 24, 0.25);
+  outline-offset: 2px;
+}
+
+.participants-empty {
+  margin: 0;
+  color: #667085;
+  font-style: italic;
 }
 
 .form-group {
